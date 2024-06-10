@@ -1,0 +1,11 @@
+Flask
+Flask-Cors
+pymongo
+python-dotenv
+werkzeug==3.0.3
+numpy==1.25.2
+pandas==2.0.3
+pillow == 9.4.0
+scikit-learn==1.2.2
+keras==2.15.0
+tensorflow==2.15.0
