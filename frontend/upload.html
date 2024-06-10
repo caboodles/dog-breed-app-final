@@ -3,19 +3,35 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Upload</title>
+        <title>Dog Breed Identifier</title>
         <link rel="stylesheet" href="css/styles.css" />
     </head>
     <body>
-        <h1>견 종 백 과</h1>
-        <form id="uploadForm">
-            <input type="file" id="fileInput" name="file" accept="image/*" />
-            <button type="submit">업로드</button>
-        </form>
-        <div id="preview">
-            <img id="imagePreview" src="" />
+        <div class="container">
+            <header>
+                <h1>견&nbsp;&nbsp;종&nbsp;&nbsp;백&nbsp;&nbsp;과</h1>
+            </header>
+            <section class="upload-section">
+                <form id="uploadForm">
+                    <input
+                        type="file"
+                        id="fileInput"
+                        name="file"
+                        accept="image/*"
+                    />
+                    <button type="submit">업로드</button>
+                </form>
+            </section>
+            <section id="preview" class="preview-section">
+                <img id="imagePreview" src="" />
+            </section>
+            <section class="info-section">
+                <div id="breedLabel"></div>
+                <div id="breedName"></div>
+                <div id="infoLabel"></div>
+                <div id="breedInfo"></div>
+            </section>
         </div>
-        <p id="breedInfo"></p>
         <script src="js/scripts.js"></script>
     </body>
 </html>

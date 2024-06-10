@@ -24,9 +24,10 @@ document.getElementById("uploadForm").addEventListener("submit", function (e) {
             .then((response) => response.json())
             .then((data) => {
                 if (data.breed) {
-                    document.getElementById(
-                        "breedInfo"
-                    ).innerText = `견종 : ${data.breed}\n정보: ${data.info}`;
+                    document.getElementById("breedLabel").innerText = "견종 :";
+                    document.getElementById("breedName").innerText = data.breed;
+                    document.getElementById("infoLabel").innerText = "정보:";
+                    document.getElementById("breedInfo").innerText = data.info;
                 } else if (data.error) {
                     document.getElementById(
                         "breedInfo"

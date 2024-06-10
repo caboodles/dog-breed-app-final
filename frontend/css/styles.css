@@ -1,35 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Nanum Gothic", sans-serif;
     text-align: center;
-    margin: 20px;
+    background: linear-gradient(
+        to right,
+        #e0f7fa,
+        #e0f2f1
+    ); /* Soft blue-green gradient */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top to allow scrolling */
+    min-height: 100vh; /* Ensure body is at least full viewport height */
+    box-sizing: border-box;
+    color: #333; /* Darker text for readability */
+}
+
+.container {
+    width: 80%;
+    background: #fff; /* White background for contrast */
+    padding: 20px;
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly lighter shadow */
+    box-sizing: border-box;
+    border: 2px solid #b2dfdb; /* Light teal border */
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3.5em; /* Slightly larger font */
+    color: #00796b; /* Dark teal text */
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px #004d40; /* Subtle shadow for text */
+}
+
+.upload-section {
+    margin-bottom: 20px;
 }
 
 form {
-    margin: 20px;
-}
-
-button {
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#preview {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border: 2px solid #80cbc4; /* Border to match button */
+    border-radius: 8px; /* Rounded corners */
+    background: #e0f2f1; /* Light teal background */
+    color: #333; /* Darker text for readability */
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+input[type="file"]:hover {
+    background: #b2dfdb; /* Slightly darker on hover */
+    border-color: #004d40; /* Darker teal border on hover */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #80cbc4; /* Light teal background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #004d40; /* Darker teal on hover */
+}
+
+.preview-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    height: auto; /* Allow section to grow with content */
+    width: 100%; /* Ensure section fits container width */
 }
 
 #imagePreview {
     max-width: 100%;
-    max-height: 50vh;
-    border: 2px solid #ddd;
-    padding: 10px auto;
-    margin-top: 10px;
+    max-height: 50vh; /* Limit height but keep aspect ratio */
+    border: 2px solid #80cbc4; /* Matching teal border */
+    padding: 10px;
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    background: #e0f2f1; /* Light teal background */
+}
+
+.info-section {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555; /* Slightly darker for readability */
+    overflow-wrap: break-word; /* Ensure long words break to fit container */
+    word-wrap: break-word; /* Support for older browsers */
+    width: 100%; /* Ensure section fits container width */
+    box-sizing: border-box;
+}
+
+#breedLabel,
+#breedName,
+#infoLabel,
+#breedInfo {
+    margin: 22px 0;
+    max-width: 100%; /* Ensure each part respects container width */
+}
+
+#breedLabel,
+#infoLabel {
+    font-weight: bold;
+    color: #00796b; /* Matching dark teal text */
+    white-space: normal; /* Ensure text wraps normally */
+    font-size: 1.3em;
+}
+
+#breedName {
+    font-weight: bold;
+    font-size: 1.5em; /* Larger font for breed name */
+    color: blue; /* Darker teal text */
 }
 
 #breedInfo {
-    margin-top: 20px;
-    font-size: 18px;
+    font-size: 1.2em; /* Slightly larger font */
+    color: black; /* Darker text for readability */
+    line-height: 1.5; /* Increase line height for more spacing */
 }
