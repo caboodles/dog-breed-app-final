@@ -4,19 +4,21 @@ This project allows users to upload an image of a dog, and it identifies the bre
 
 ## Setup
 
+### You must use python version : 3.10.5
+
 1. Clone the repository.
-2. Set up a Python virtual environment.
-3. Install the dependencies:
+2. Add "model.h5" file to dog-breed-app-final(root directory)
+3. Set up a Python virtual environment.
+4. Install the dependencies:
     - pip install -r backend/requirements.txt
-4. Start the MongoDB server.
+5. Start the MongoDB server.
     - MONGO_URI=mongodb://localhost:27017/dog_breed_db
-5. Seed the database:
+6. Seed the database:
     - python database/seed/seed_data.py
-6. Run the Flask application:
+7. Run the Flask application:
     - python backend/app.py
 
 
 ## Usage
 
-- Open `frontend/index.html` to start the application.
 - Upload a dog image through `frontend/upload.html` to identify the breed.
